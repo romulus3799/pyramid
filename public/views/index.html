@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta chapter="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Pile</title>
+
+		<!-- SCROLLS -->
+		<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/style.css">
+
+		<!-- SPELLS -->
+		<script src="libs/angular/angular.min.js" charset="utf-8"></script>
+		<script src="libs/angular-route/angular-route.min.js" charset="utf-8"></script>
+
+		<!-- ANGULAR -->
+		<script src="js/controllers/MainCtrl.js"></script>
+	    <script src="js/controllers/PyramidCtrl.js"></script>
+	    <script src="js/services/PyramidService.js"></script>
+	    <script src="js/appRoutes.js"></script>
+	    <script src="js/app.js"></script>
+
+	</head>
+	<body ng-controller="MainController">
+		<div class="container">
+			<div class="jumbotron text-center">
+				<h1>Pyramids, Yo <span class="label label-info">{{ pyramids.length }}</span></h1>
+			</div>
+
+			<!-- list of existing pyramids -->
+			<div id="pyramid-list" class="row">
+				<div class="col-sm-4 col-sm-offset-4">
+
+					<div class="checkbox" ng-repeat="pyramid in pyramids">
+						<h3><input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ pyramid.name }}</h3>
+
+					</div>
+
+				</div>
+			</div>
+
+			<!-- PYRAMID input FORM -->
+			<div id="pyramid-form" class="row">
+				<div class="col-sm-8 col-sm col-sm-offset-2 text-center">
+					<form action="">
+						<div class="form-group">
+
+							<!-- name input -->
+							<input type="text"
+							class="form-control input-lg text-center"
+							placeholder="Name"
+							ng-model="formData.name">
+
+							<!-- context input -->
+							<input type="text"
+							class="form-control input-lg text-center"
+							placeholder="context"
+							ng-model="formData.context">
+
+							<!-- contrast input -->
+							<input type="text"
+							class="form-control input-lg text-center"
+							placeholder="contrast"
+							ng-model="formData.contrast">
+
+							<!-- example input -->
+							<input type="text"
+							class="form-control input-lg text-center"
+							placeholder="example"
+							ng-model="formData.example">
+
+							<!-- application input -->
+							<input type="text"
+							class="form-control input-lg text-center"
+							placeholder="application"
+							ng-model="formData.application">
+
+							<!-- fn input -->
+							<input type="text"
+							class="form-control input-lg text-center"
+							placeholder="fn"
+							ng-model="formData.fn">
+
+							<!-- cause input -->
+							<input type="text"
+							class="form-control input-lg text-center"
+							placeholder="cause"
+							ng-model="formData.cause">
+
+							<!-- impact input -->
+							<input type="text"
+							class="form-control input-lg text-center"
+							placeholder="impact"
+							ng-model="formData.impact">
+
+							<!-- author input -->
+							<input type="text"
+							class="form-control input-lg text-center"
+							placeholder="author"
+							ng-model="formData.author">
+
+							<!-- chapter input -->
+							<input type="text"
+							class="form-control input-lg text-center"
+							placeholder="chapter"
+							ng-model="formData.name">
+
+						</div>
+
+						<button type="submit"
+						class="btn btn-primary btn-lg"
+						ng-click="crcreatePyramid()">Add</button>
+
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>

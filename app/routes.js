@@ -1,5 +1,5 @@
 const Pyramid = require('./models/pyramid')
-
+const path = require('path');
 module.exports = (app) => {
 	//get all pyramids
 	app.get('/api/pyramids', (req, res) => {
@@ -19,7 +19,9 @@ module.exports = (app) => {
 			example		: res.body.example,
 			application	: res.body.application,
 			fn			: res.body.fn,
+			cause		: res.body.cause,
 			impact		: res.body.impact,
+			author		: res.body.author,
 			chapter		: res.body.chapter
 		}, (err, pyramid) => {
 			if (err) {res.send(err)}
@@ -49,6 +51,6 @@ module.exports = (app) => {
 
 	//default route
 	app.get('*', (req,res) => {
-		res.sendFile('/../public/views/index.html')
+		res.sendfile(path.resolve('c:/pyramid/public/views/index.html'))
 	})
 }
