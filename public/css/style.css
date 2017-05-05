@@ -7,3 +7,17 @@ body {
 #pyramid-list {
 	margin-bottom: 30px;
 }
+
+.form-group label {
+	font-size: 1.6vw;
+	margin-top: 50px;
+}
+.form-group input[type=text] {
+	font-size: 2vw;
+	width: 50vw;
+}
+.form-group textarea {
+	font-size: 2vw;
+	width: 50vw;
+	resize: none;
+}

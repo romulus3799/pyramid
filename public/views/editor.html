@@ -1,0 +1,102 @@
+<div ng-controller="MainController">
+	<div class="jumbotron text-center">
+		<h1>Pyramid Editor</h1>
+	</div>
+
+	<!-- list of existing pyramids -->
+	<div id="pyramid-list" class="row">
+		<div class="col-sm-4 col-sm-offset-4">
+
+			<div ng-repeat="pyramid in pyramids">
+				<h3>
+					<button class="btn btn-warning" ng-click="deletePyramid(pyramid._id)">Delete</button>
+					{{ pyramid.name }}
+				</h3>
+			</div>
+		</div>
+	</div>
+
+	<!-- PYRAMID input FORM -->
+	<div id="pyramid-form" class="row">
+		<div class="col-sm-8 col-sm col-sm-offset-2 text-center">
+			<form action="" id="pyr-form">
+				<div class="form-group">
+					<!-- author input -->
+					<label for="author-input">Your name:</label>
+					<input type="text" id="author-input"
+					class="form-control input-lg"
+					placeholder="Author"
+					ng-model="formData.author">
+
+					<!-- name input -->
+					<label for="name-input">Name of term:</label>
+					<input type="text" id="name-input"
+					class="form-control input-lg"
+					placeholder="Name"
+					ng-model="formData.name">
+
+					<!-- chapter input -->
+					<label for="chapter-input">Term's chapter or unit:</label>
+					<input type="text" id="chapter-input"
+					class="form-control input-lg"
+					placeholder="Chapter"
+					ng-model="formData.chapter">
+
+					<!-- context input -->
+					<label for="context-input">Term's category, theory, or group:</label>
+					<input type="text" id="context-input"
+					class="form-control input-lg"
+					placeholder="Context"
+					ng-model="formData.context">
+
+					<!-- contrast input -->
+					<label for="contrast-input">Something the term could be confused with:</label>
+					<input type="text" id="contrast-input"
+					class="form-control input-lg"
+					placeholder="Contrast"
+					ng-model="formData.contrast">
+
+					<!-- example input -->
+					<label for="example-input">Scenario in which the term is evident:</label>
+					<textarea rows="4" id="example-input"
+					class="form-control input-lg"
+					placeholder="Example"
+					ng-model="formData.example"></textarea>
+
+					<!-- application input (TEMPORARILY REMOVED) -->
+					<!-- <label for="application-input">Scenario in which the term is evident:</label>
+					<input type="text" id="application-input"
+					class="form-control input-lg"
+					placeholder="application"
+					ng-model="formData.application"> -->
+
+					<!-- fn input -->
+					<label for="fn-input">What the term does, or what happens in presence of the term:</label>
+					<textarea rows="4" id="fn-input"
+					class="form-control input-lg"
+					placeholder="Function"
+					ng-model="formData.fn"></textarea>
+
+					<!-- cause input -->
+					<label for="cause-input">Why the term exists:</label>
+					<textarea rows="4" id="cause-input"
+					class="form-control input-lg"
+					placeholder="Cause"
+					ng-model="formData.cause"></textarea>
+
+					<!-- impact input -->
+					<label for="impact-input">How the term affects real life:</label>
+					<textarea rows="4" id="impact-input"
+					class="form-control input-lg"
+					placeholder="Impact"
+					ng-model="formData.impact"></textarea>
+				</div>
+
+				<button type="submit"
+				class="btn btn-primary btn-lg"
+				ng-click="createPyramid()">Add</button>
+
+			</form>
+		</div>
+	</div>
+</div>

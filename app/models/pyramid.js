@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-module.exports - mongoose.model('Pyramid', {
+module.exports = mongoose.model('Pyramid', {
 	name 		: {type : String, default : '(none)'},
 	context		: {type : String, default : '(none)'},
 	contrast	: {type : String, default : '(none)'},

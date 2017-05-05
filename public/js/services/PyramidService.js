@@ -1,5 +1,5 @@
 angular.module('PyramidService', [])
-	.factory('Pyramid', ['$http', ($http) => {
+	.factory('PyramidService', ['$http', ($http) => {
 
 		return {
 			get : () => {

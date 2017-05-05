@@ -1,5 +1,6 @@
-const Pyramid = require('./models/pyramid')
-const path = require('path');
+var Pyramid = require('./models/pyramid')
+const path = require('path')
+
 module.exports = (app) => {
 	//get all pyramids
 	app.get('/api/pyramids', (req, res) => {
@@ -10,19 +11,20 @@ module.exports = (app) => {
 		})
 	})
 
-	app.post('/api/todos', (req, res) => {
+	app.post('/api/pyramids', (req, res) => {
+		console.log('Posting...');
 		//create pyramid
 		Pyramid.create({
-			name		: res.body.name,
-			context		: res.body.context,
-			contrast	: res.body.contrast,
-			example		: res.body.example,
-			application	: res.body.application,
-			fn			: res.body.fn,
-			cause		: res.body.cause,
-			impact		: res.body.impact,
-			author		: res.body.author,
-			chapter		: res.body.chapter
+			name		: req.body.name,
+			context		: req.body.context,
+			contrast	: req.body.contrast,
+			example		: req.body.example,
+			application	: req.body.application,
+			fn			: req.body.fn,
+			cause		: req.body.cause,
+			impact		: req.body.impact,
+			author		: req.body.author,
+			chapter		: req.body.chapter
 		}, (err, pyramid) => {
 			if (err) {res.send(err)}
 
@@ -40,17 +42,18 @@ module.exports = (app) => {
 			_id : req.params.pyramid_id
 		}, (err, pyramid) => {
 			if (err) {res.send(err)}
+
+			Pyramid.find((err, pyrs) => {
+				if (err) {res.send(err)}
+
+				res.json(pyrs)
+			})
 		})
 
-		Pyramid.find((err, pyrs) => {
-			if (err) {res.send(err)}
-
-			res.json(pyrs)
-		})
 	})
 
 	//default route
 	app.get('*', (req,res) => {
-		res.sendfile(path.resolve('c:/pyramid/public/views/index.html'))
+		res.sendfile(path.resolve('public/views/index.html'))
 	})
 }
