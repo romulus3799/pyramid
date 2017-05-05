@@ -1,0 +1,17 @@
+<div ng-controller="MainController">
+	<div class="jumbotron text-center"><h1><span class="label label-info">{{ pyramids.length }}</span> Pyramids</h1></div>
+	<!-- list of existing pyramids -->
+	<div id="pyramid-list" class="row">
+		<div class="col-sm-4 col-sm-offset-4">
+
+			<div ng-repeat="pyramid in pyramids">
+				<h3>
+					{{ pyramid.name }}
+					<!-- TODO: Add edit -->
+					<button class="btn btn-primary" ng-click="">Edit</button>
+					<button class="btn btn-warning" ng-click="deletePyramid(pyramid._id)">Delete</button>
+				</h3>
+			</div>
+		</div>
+	</div>
+</div>

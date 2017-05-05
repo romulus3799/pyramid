@@ -3,19 +3,6 @@
 		<h1>Pyramid Editor</h1>
 	</div>
 
-	<!-- list of existing pyramids -->
-	<div id="pyramid-list" class="row">
-		<div class="col-sm-4 col-sm-offset-4">
-
-			<div ng-repeat="pyramid in pyramids">
-				<h3>
-					<button class="btn btn-warning" ng-click="deletePyramid(pyramid._id)">Delete</button>
-					{{ pyramid.name }}
-				</h3>
-			</div>
-		</div>
-	</div>
-
 	<!-- PYRAMID input FORM -->
 	<div id="pyramid-form" class="row">
 		<div class="col-sm-8 col-sm col-sm-offset-2 text-center">

@@ -7,7 +7,10 @@ angular.module('appRoutes', [])
 			templateUrl		: 'views/editor.html',
 			controllerAs	: 'MainController'
 		})
-		// TODO: add when pyramids
+		.when('/pyramids', {
+			templateUrl		: 'views/pyramids.html',
+			controllerAs	: 'MainController'
+		})
 
 	$locationProvider.html5Mode(true)
 }])
