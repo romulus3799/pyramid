@@ -10,8 +10,12 @@ angular.module('PyramidService', [])
 				return $http.post('/api/pyramids', pyrData)
 			},
 
+			update : (id, pyrData) => {
+				return $http.post('/api/pyramids/' + id, pyrData)
+			},
+
 			delete : (id) => {
-				return $http.delete('/api/nerds' + id)
+				return $http.delete('/api/pyramids/' + id)
 			}
 		}
 	}])

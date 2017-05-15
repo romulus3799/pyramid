@@ -36,6 +36,29 @@ module.exports = (app) => {
 		})
 	})
 
+	app.post('/api/pyramids/:pyramid_id', (req,res) => {
+		Pyramid.update({ _id : req.params.pyramid_id }, {
+			name		: req.body.name,
+			context		: req.body.context,
+			contrast	: req.body.contrast,
+			example		: req.body.example,
+			application	: req.body.application,
+			fn			: req.body.fn,
+			cause		: req.body.cause,
+			impact		: req.body.impact,
+			author		: req.body.author,
+			chapter		: req.body.chapter
+		}, (err, pyramid) => {
+			if (err) {res.send(err)}
+
+			Pyramid.find((err, pyrs) => {
+				if (err) {res.send(err)}
+
+				res.json(pyrs)
+			})
+		})
+	})
+
 	app.delete('/api/pyramids/:pyramid_id', (req, res) => {
 		//delete pyramid
 		Pyramid.remove({

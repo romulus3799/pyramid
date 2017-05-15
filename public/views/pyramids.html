@@ -1,16 +1,110 @@
 <div ng-controller="MainController">
+
+	<!-- header -->
 	<div class="jumbotron text-center"><h1><span class="label label-info">{{ pyramids.length }}</span> Pyramids</h1></div>
 	<!-- list of existing pyramids -->
 	<div id="pyramid-list" class="row">
-		<div class="col-sm-4 col-sm-offset-4">
 
+		<div>
 			<div ng-repeat="pyramid in pyramids">
-				<h3>
-					{{ pyramid.name }}
-					<!-- TODO: Add edit -->
-					<button class="btn btn-primary" ng-click="">Edit</button>
-					<button class="btn btn-warning" ng-click="deletePyramid(pyramid._id)">Delete</button>
-				</h3>
+				<div class="name-container">
+					<button class="btn" ng-click="showEdit = !showEdit; resetForm(pyramid);">
+						<h3>{{ pyramid.name }}</h3>
+					</button>
+				</div>
+
+				<button class="btn btn-primary" ng-click="showEdit = true; resetForm(pyramid);" ng-show="!showEdit">Edit</button>
+
+				<form ng-show="showEdit" id="pyr-form">
+					<div class="form-group">
+						<!-- author input -->
+						<label for="author-input-{{ pyramid._id }}">Author:</label>
+						<input type="text" id="author-input-{{ pyramid._id }}"
+						class="form-control input-lg"
+						placeholder="Author"
+						ng-model="formData.author"
+						value="pyramid.author">
+
+						<!-- name input -->
+						<label for="name-input-{{ pyramid._id }}">Name:</label>
+						<input type="text" id="name-input-{{ pyramid._id }}"
+						class="form-control input-lg"
+						placeholder="Name"
+						ng-model="formData.name"
+						value="pyramid.name">
+
+						<!-- chapter input -->
+						<label for="chapter-input-{{ pyramid._id }}">Chapter/Unit:</label>
+						<input type="text" id="chapter-input-{{ pyramid._id }}"
+						class="form-control input-lg"
+						placeholder="Chapter"
+						ng-model="formData.chapter"
+						value="pyramid.chapter">
+
+						<!-- context input -->
+						<label for="context-input-{{ pyramid._id }}">Context:</label>
+						<input type="text" id="context-input-{{ pyramid._id }}"
+						class="form-control input-lg"
+						placeholder="Context"
+						ng-model="formData.context"
+						value="pyramid.context">
+
+						<!-- contrast input -->
+						<label for="contrast-input-{{ pyramid._id }}">Contrast:</label>
+						<input type="text" id="contrast-input-{{ pyramid._id }}"
+						class="form-control input-lg"
+						placeholder="Contrast"
+						ng-model="formData.contrast"
+						value="pyramid.contrast">
+
+						<!-- example input -->
+						<label for="example-input-{{ pyramid._id }}">Example:</label>
+						<textarea rows="4" id="example-input-{{ pyramid._id }}"
+						class="form-control input-lg"
+						placeholder="Example"
+						ng-model="formData.example"
+						value="pyramid.example"></textarea>
+
+						<!-- application input (TEMPORARILY REMOVED) -->
+						<!-- <label for="application-input-{{ pyramid._id }}">Scenario in which the term is evident:</label>
+						<input type="text" id="application-input-{{ pyramid._id }}"
+						class="form-control input-lg"
+						placeholder="application"
+						value="pyramid.application"> -->
+
+						<!-- fn input -->
+						<label for="fn-input-{{ pyramid._id }}">Function:</label>
+						<textarea rows="4" id="fn-input-{{ pyramid._id }}"
+						class="form-control input-lg"
+						placeholder="Function"
+						ng-model="formData.fn"
+						value="pyramid.fn"></textarea>
+
+						<!-- cause input -->
+						<label for="cause-input-{{ pyramid._id }}">Cause:</label>
+						<textarea rows="4" id="cause-input-{{ pyramid._id }}"
+						class="form-control input-lg"
+						placeholder="Cause"
+						ng-model="formData.cause"
+						value="pyramid.cause"></textarea>
+
+						<!-- impact input -->
+						<label for="impact-input-{{ pyramid._id }}">Impact:</label>
+						<textarea rows="4" id="impact-input-{{ pyramid._id }}"
+						class="form-control input-lg"
+						placeholder="Impact"
+						ng-model="formData.impact"
+						value="pyramid.impact"></textarea>
+					</div>
+
+					<button
+					class="btn btn-primary btn-lg"
+					ng-click="showEdit = !showEdit; updatePyramid(pyramid._id)">Submit Changes</button>
+					<button class="btn btn-warning btn-lg" ng-click="showEdit = false; resetForm(pyramid)">Cancel</button>
+				</form>
+
+				<button class="btn btn-danger" ng-click="deletePyramid(pyramid._id)">Delete</button>
+
 			</div>
 		</div>
 	</div>
