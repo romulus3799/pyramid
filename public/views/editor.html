@@ -5,7 +5,7 @@
 
 	<!-- PYRAMID input FORM -->
 	<div id="pyramid-form" class="row">
-		<div class="col-sm-8 col-sm col-sm-offset-2 text-center">
+		<div class="col-sm-8 col-sm text-center">
 			<form action="" id="pyr-form">
 				<div class="form-group">
 					<!-- author input -->
@@ -24,10 +24,11 @@
 
 					<!-- chapter input -->
 					<label for="chapter-input">Term's chapter or unit:</label>
-					<input type="text" id="chapter-input"
+					<select id="chapter-input"
 					class="form-control input-lg"
-					placeholder="Chapter"
 					ng-model="formData.chapter">
+						<option ng-repeat="chapter in chapters">{{ chapter }}</option>
+					</select>
 
 					<!-- context input -->
 					<label for="context-input">Term's category, theory, or group:</label>

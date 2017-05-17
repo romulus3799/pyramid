@@ -16,6 +16,10 @@ angular.module('PyramidService', [])
 
 			delete : (id) => {
 				return $http.delete('/api/pyramids/' + id)
+			},
+
+			getChapters : () => {
+				return $http.get('../../data/chapters.txt')
 			}
 		}
 	}])

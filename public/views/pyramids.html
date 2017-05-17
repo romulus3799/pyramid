@@ -1,4 +1,4 @@
-<div ng-controller="MainController">
+<div ng-controller="PyramidController">
 
 	<!-- header -->
 	<div class="jumbotron text-center"><h1><span class="label label-info">{{ pyramids.length }}</span> Pyramids</h1></div>
@@ -34,12 +34,12 @@
 						value="pyramid.name">
 
 						<!-- chapter input -->
-						<label for="chapter-input-{{ pyramid._id }}">Chapter/Unit:</label>
-						<input type="text" id="chapter-input-{{ pyramid._id }}"
+						<label for="chapter-input">Term's chapter or unit:</label>
+						<select id="chapter-input"
 						class="form-control input-lg"
-						placeholder="Chapter"
-						ng-model="formData.chapter"
-						value="pyramid.chapter">
+						ng-model="formData.chapter">
+							<option ng-repeat="chapter in chapters">{{ chapter }}</option>
+						</select>
 
 						<!-- context input -->
 						<label for="context-input-{{ pyramid._id }}">Context:</label>
