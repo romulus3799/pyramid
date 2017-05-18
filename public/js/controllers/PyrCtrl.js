@@ -1,6 +1,6 @@
 angular.module('PyrCtrl', [])
 	.controller('PyramidController', ($scope, $http, PyramidService) => {
-		console.log("Into controller")
+		console.log("Into pyr controller")
 
 		//ESTABLISH SERVICES
 		//get all pyramids

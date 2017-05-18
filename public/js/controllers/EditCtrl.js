@@ -1,6 +1,6 @@
-angular.module('MainCtrl', [])
-	.controller('MainController', ($scope, $http, PyramidService) => {
-		console.log("Into controller")
+angular.module('EditCtrl', [])
+	.controller('EditorController', ($scope, $http, PyramidService) => {
+		console.log("Into editor controller")
 
 		//ESTABLISH SERVICES
 		//get all pyramids

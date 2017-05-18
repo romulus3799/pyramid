@@ -3,13 +3,14 @@ angular.module('appRoutes', [])
 ($routeProvider, $locationProvider) => {
 
 	$routeProvider
-		.when('/', {
+		// TODO: add "/" page
+		.when('/create', {
 			templateUrl		: 'views/editor.html',
-			controllerAs	: 'MainController'
+			controllerAs	: 'EditorController'
 		})
 		.when('/pyramids', {
 			templateUrl		: 'views/pyramids.html',
-			controllerAs	: 'MainController'
+			controllerAs	: 'PyramidController'
 		})
 
 	$locationProvider.html5Mode(true)
