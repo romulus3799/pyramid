@@ -99,7 +99,7 @@
 
 					<button
 					class="btn btn-primary btn-lg"
-					ng-click="showEdit = !showEdit; updatePyramid(pyramid._id)">Submit Changes</button>
+					ng-click="showEdit = !showEdit; updatePyramid(pyramid._id); resetForm(pyramid)">Submit Changes</button>
 					<button class="btn btn-warning btn-lg" ng-click="showEdit = false; resetForm(pyramid)">Cancel</button>
 				</form>
 
