@@ -3,7 +3,7 @@ const path = require('path')
 
 module.exports = (app) => {
 	//get all pyramids
-	app.get('/api/pyramids', (req, res) => {
+	app.get('/pyramid/api/pyramids', (req, res) => {
 		Pyramid.find((err, pyrs) => {
 			if (err) {res.send(err)}
 
@@ -11,7 +11,7 @@ module.exports = (app) => {
 		})
 	})
 
-	app.post('/api/pyramids', (req, res) => {
+	app.post('/pyramid/api/pyramids', (req, res) => {
 		console.log('Posting...');
 		//create pyramid
 		Pyramid.create({
@@ -36,7 +36,7 @@ module.exports = (app) => {
 		})
 	})
 
-	app.post('/api/pyramids/:pyramid_id', (req,res) => {
+	app.post('/pyramid/api/pyramids/:pyramid_id', (req,res) => {
 		Pyramid.update({ _id : req.params.pyramid_id }, {
 			name		: req.body.name,
 			context		: req.body.context,
@@ -59,7 +59,7 @@ module.exports = (app) => {
 		})
 	})
 
-	app.delete('/api/pyramids/:pyramid_id', (req, res) => {
+	app.delete('/pyramid/api/pyramids/:pyramid_id', (req, res) => {
 		//delete pyramid
 		Pyramid.remove({
 			_id : req.params.pyramid_id
