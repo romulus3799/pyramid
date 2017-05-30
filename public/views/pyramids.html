@@ -8,14 +8,12 @@
 		<div>
 			<div ng-repeat="pyramid in pyramids">
 				<div class="name-container">
-					<button class="btn" ng-click="showEdit = !showEdit; resetForm(pyramid);">
+					<button class="btn" data-toggle="collapse" data-target="#pyr-form-{{ pyramid._id }}" ng-click="resetForm(pyramid);">
 						<h3>{{ pyramid.name }}</h3>
 					</button>
 				</div>
 
-				<button class="btn btn-primary" ng-click="showEdit = true; resetForm(pyramid);" ng-show="!showEdit">Edit</button>
-
-				<form ng-show="showEdit" id="pyr-form">
+				<form id="pyr-form-{{ pyramid._id }}" class="collapse">
 					<div class="form-group">
 						<!-- author input -->
 						<label for="author-input-{{ pyramid._id }}">Author:</label>
@@ -34,8 +32,8 @@
 						value="pyramid.name">
 
 						<!-- chapter input -->
-						<label for="chapter-input">Term's chapter or unit:</label>
-						<select id="chapter-input"
+						<label for="chapter-input-{{ pyramid._id }}">Term's chapter or unit:</label>
+						<select id="chapter-input-{{ pyramid._id }}"
 						class="form-control input-lg"
 						ng-model="formData.chapter">
 							<option ng-repeat="chapter in chapters">{{ chapter }}</option>
@@ -97,13 +95,25 @@
 						value="pyramid.impact"></textarea>
 					</div>
 
-					<button
+					<!-- submit button -->
+					<!--REMOVED: data-toggle="collapse" data-target="#pyr-form-{{ pyramid._id }}" -->
+					<input
+					type="submit"
 					class="btn btn-primary btn-lg"
-					ng-click="showEdit = !showEdit; updatePyramid(pyramid._id); resetForm(pyramid)">Submit Changes</button>
-					<button class="btn btn-warning btn-lg" ng-click="showEdit = false; resetForm(pyramid)">Cancel</button>
+					value="Submit Changes"
+
+					ng-click="execUpdate(pyramid)">
+					<!-- cancel button -->
+					<button
+					class="btn btn-warning btn-lg"
+					data-toggle="collapse" data-target="#pyr-form-{{ pyramid._id }}"
+					ng-click="resetForm(pyramid)">Cancel</button>
+					<!-- delete button -->
+					<button
+					class="btn btn-danger btn-lg"
+					ng-click="deletePyramid(pyramid._id)">Delete Pyramid</button>
 				</form>
 
-				<button class="btn btn-danger" ng-click="deletePyramid(pyramid._id)">Delete</button>
 
 			</div>
 		</div>

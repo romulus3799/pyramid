@@ -1,8 +1,7 @@
 angular.module('PyrCtrl', [])
 	.controller('PyramidController', ($scope, $http, PyramidService) => {
 		console.log("Into pyr controller")
-
-		//ESTABLISH SERVICES
+		//-------------------ESTABLISH SERVICES-------------------//
 		//get all pyramids
 		$scope.pyramids = []
 		PyramidService.get().then((pyramids) => {
@@ -12,11 +11,8 @@ angular.module('PyrCtrl', [])
 		$scope.updatePyramid = (id) => {
 			// TODO: all of this, add http post
 			PyramidService.update(id, $scope.formData)
-			.success((pyramids) => {
+			.then((pyramids) => {
 				$scope.pyramids = pyramids.data
-			})
-			.error((data) => {
-				console.log('Error: ' + data);
 			})
 		}
 		$scope.deletePyramid = (id) => {
@@ -26,6 +22,7 @@ angular.module('PyrCtrl', [])
 			})
 		}
 
+		//-------------------SETUP-------------------//
 		//get chapters
 		$scope.chapters = []
 		PyramidService.getChapters().then((raw) => {
@@ -44,6 +41,32 @@ angular.module('PyrCtrl', [])
 			impact		: '',
 			author		: '',
 			chapter		: ''
+		}
+
+		//-------------------JQUERY SETUP-------------------//
+		$(document).ready(() => {
+			//set default chapter values for each pyramid
+			for(let i = 0; i < $scope.pyramids.length; i++) {
+				let pyr = $scope.pyramids[i]
+				let options = $('#chapter-input-' + pyr._id).find('option')
+
+				//iter over each option and check if it matches pyramid data
+				for(let a = 0; a < options.length; a++) {
+					if(options[a].val() === pyr.chapter) {
+						options[a].attr('selected','selected')
+						console.log('Found');
+					}
+				}
+			}
+		})
+
+		//-------------------DYNAMIC-------------------//
+		$scope.execUpdate = (pyr) => {
+			$scope.updatePyramid(pyr._id)
+			//refresh to see changes
+			location.reload()
+
+			//$scope.resetForm(pyr)
 		}
 
 
