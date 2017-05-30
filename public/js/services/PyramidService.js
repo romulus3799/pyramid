@@ -3,19 +3,19 @@ angular.module('PyramidService', [])
 
 		return {
 			get : () => {
-				return $http.get('/api/pyramids')
+				return $http.get('/pyramid/api/pyramids')
 			},
 
 			create : (pyrData) => {
-				return $http.post('/api/pyramids', pyrData)
+				return $http.post('/pyramid/api/pyramids', pyrData)
 			},
 
 			update : (id, pyrData) => {
-				return $http.post('/api/pyramids/' + id, pyrData)
+				return $http.post('/pyramid/api/pyramids/' + id, pyrData)
 			},
 
 			delete : (id) => {
-				return $http.delete('/api/pyramids/' + id)
+				return $http.delete('/pyramid/api/pyramids/' + id)
 			},
 
 			getChapters : () => {
