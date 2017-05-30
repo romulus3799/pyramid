@@ -4,11 +4,11 @@ angular.module('appRoutes', [])
 
 	$routeProvider
 		// TODO: add "/" page
-		.when('./create', {
+		.when('/pyramid/create', {
 			templateUrl		: 'views/editor.html',
 			controllerAs	: 'EditorController'
 		})
-		.when('./pyramids', {
+		.when('/pyramid/pyramids', {
 			templateUrl		: 'views/pyramids.html',
 			controllerAs	: 'PyramidController'
 		})
