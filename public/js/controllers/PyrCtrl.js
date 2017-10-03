@@ -1,32 +1,31 @@
 angular.module('PyrCtrl', [])
 	.controller('PyramidController', ($scope, $http, PyramidService) => {
-		console.log("Into pyr controller")
+		console.log("Into pyr controller");
 		//-------------------ESTABLISH SERVICES-------------------//
 		//get all pyramids
 		$scope.pyramids = []
 		PyramidService.get().then((pyramids) => {
 			console.log(pyramids.data);
-			$scope.pyramids = pyramids.data
+			$scope.pyramids = pyramids.data;
 		})
 		$scope.updatePyramid = (id) => {
-			// TODO: all of this, add http post
 			PyramidService.update(id, $scope.formData)
 			.then((pyramids) => {
-				$scope.pyramids = pyramids.data
+				$scope.pyramids = pyramids.data;
 			})
 		}
 		$scope.deletePyramid = (id) => {
 			PyramidService.delete(id).then((pyramids,err) => {
-				$scope.pyramids = pyramids.data
-				if (err) {console.log(err)}
+				$scope.pyramids = pyramids.data;
+				if (err) {console.log(err); }
 			})
 		}
 
 		//-------------------SETUP-------------------//
 		//get chapters
-		$scope.chapters = []
+		$scope.chapters = [];
 		PyramidService.getChapters().then((raw) => {
-			$scope.chapters = raw.data.split('\n')
+			$scope.chapters = raw.data.split('\n');
 		})
 
 		//setup form data
@@ -41,19 +40,19 @@ angular.module('PyrCtrl', [])
 			impact		: '',
 			author		: '',
 			chapter		: ''
-		}
+		};
 
 		//-------------------JQUERY SETUP-------------------//
 		$(document).ready(() => {
 			//set default chapter values for each pyramid
 			for(let i = 0; i < $scope.pyramids.length; i++) {
-				let pyr = $scope.pyramids[i]
-				let options = $('#chapter-input-' + pyr._id).find('option')
+				let pyr = $scope.pyramids[i];
+				let options = $('#chapter-input-' + pyr._id).find('option');
 
 				//iter over each option and check if it matches pyramid data
 				for(let a = 0; a < options.length; a++) {
 					if(options[a].val() === pyr.chapter) {
-						options[a].attr('selected','selected')
+						options[a].attr('selected','selected');
 						console.log('Found');
 					}
 				}
@@ -62,9 +61,9 @@ angular.module('PyrCtrl', [])
 
 		//-------------------DYNAMIC-------------------//
 		$scope.execUpdate = (pyr) => {
-			$scope.updatePyramid(pyr._id)
+			$scope.updatePyramid(pyr._id);
 			//refresh to see changes
-			location.reload()
+			location.reload();
 
 			//$scope.resetForm(pyr)
 		}
@@ -80,15 +79,15 @@ angular.module('PyrCtrl', [])
 		}
 
 		$scope.resetForm = (pyramid) => {
-			$scope.formData.name = pyramid.name
-			$scope.formData.context = pyramid.context
-			$scope.formData.contrast = pyramid.contrast
-			$scope.formData.example = pyramid.example
-			$scope.formData.application = pyramid.application
-			$scope.formData.fn = pyramid.fn
-			$scope.formData.cause = pyramid.cause
-			$scope.formData.impact = pyramid.impact
-			$scope.formData.author = pyramid.author
-			$scope.formData.chapter = pyramid.chapter
+			$scope.formData.name = pyramid.name;
+			$scope.formData.context = pyramid.context;
+			$scope.formData.contrast = pyramid.contrast;
+			$scope.formData.example = pyramid.example;
+			$scope.formData.application = pyramid.application;
+			$scope.formData.fn = pyramid.fn;
+			$scope.formData.cause = pyramid.cause;
+			$scope.formData.impact = pyramid.impact;
+			$scope.formData.author = pyramid.author;
+			$scope.formData.chapter = pyramid.chapter;
 		}
 	})

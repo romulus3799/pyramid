@@ -4,13 +4,14 @@ html {
 body {
 	padding-top: 50px;
 }
-#pyramid-list {
-	margin-bottom: 30px;
-	padding-left: 20vw;
-}
 
 .name-container {
 	margin: 40px 0px 20px 0px;
+}
+
+.pyramid-button {
+	width: 100%;
+	text-align: center;
 }
 
 .form-group label {
@@ -25,4 +26,7 @@ body {
 	font-size: 2vw;
 	width: 50vw;
 	resize: none;
+}
+td {
+	font-size: 16pt;
 }

@@ -77,6 +77,6 @@ module.exports = (app) => {
 
 	//default route
 	app.get('*', (req,res) => {
-		res.sendfile(path.resolve('public/views/index.html'))
+		res.sendfile(path.resolve('public/index.html'))
 	})
 }

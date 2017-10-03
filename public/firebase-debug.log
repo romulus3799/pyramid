@@ -1,0 +1,232 @@
+[debug] [2017-09-28T19:13:17.829Z] ----------------------------------------------------------------------
+[debug] [2017-09-28T19:13:17.832Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Romil\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-09-28T19:13:17.832Z] CLI Version:   3.12.0
+[debug] [2017-09-28T19:13:17.832Z] Platform:      win32
+[debug] [2017-09-28T19:13:17.832Z] Node Version:  v8.1.2
+[debug] [2017-09-28T19:13:17.832Z] Time:          Thu Sep 28 2017 15:13:17 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:13:17.832Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-28T19:13:17.847Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-28T19:13:17.847Z] > authorizing via signed-in user
+[debug] [2017-09-28T19:13:17.850Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/psychpyramids  
+ Thu Sep 28 2017 15:13:17 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:13:18.165Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-28T19:13:18.166Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/psychpyramids/tokens  
+ Thu Sep 28 2017 15:13:18 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:13:18.579Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\pyramid'...
+[info] 
+[debug] [2017-09-28T19:13:18.589Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/psychpyramids  
+ Thu Sep 28 2017 15:13:18 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:13:18.783Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-28T19:13:18.784Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/688276571448/clients/_:getWebAppConfig  
+ Thu Sep 28 2017 15:13:18 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:13:19.006Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...
+[debug] [2017-09-28T19:15:00.857Z] ----------------------------------------------------------------------
+[debug] [2017-09-28T19:15:00.859Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Romil\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-09-28T19:15:00.860Z] CLI Version:   3.12.0
+[debug] [2017-09-28T19:15:00.860Z] Platform:      win32
+[debug] [2017-09-28T19:15:00.860Z] Node Version:  v8.1.2
+[debug] [2017-09-28T19:15:00.860Z] Time:          Thu Sep 28 2017 15:15:00 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:15:00.860Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-28T19:15:00.874Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-28T19:15:00.874Z] > authorizing via signed-in user
+[debug] [2017-09-28T19:15:00.876Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/psychpyramids  
+ Thu Sep 28 2017 15:15:00 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:15:01.297Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-28T19:15:01.299Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/psychpyramids/tokens  
+ Thu Sep 28 2017 15:15:01 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:15:01.606Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\pyramid'...
+[info] 
+[debug] [2017-09-28T19:15:01.615Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/psychpyramids  
+ Thu Sep 28 2017 15:15:01 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:15:01.816Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-28T19:15:01.817Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/688276571448/clients/_:getWebAppConfig  
+ Thu Sep 28 2017 15:15:01 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:15:02.045Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...
+[debug] [2017-09-28T19:16:07.683Z] ----------------------------------------------------------------------
+[debug] [2017-09-28T19:16:07.686Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Romil\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-09-28T19:16:07.686Z] CLI Version:   3.12.0
+[debug] [2017-09-28T19:16:07.686Z] Platform:      win32
+[debug] [2017-09-28T19:16:07.686Z] Node Version:  v8.1.2
+[debug] [2017-09-28T19:16:07.686Z] Time:          Thu Sep 28 2017 15:16:07 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:16:07.686Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-28T19:16:07.702Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-28T19:16:07.702Z] > authorizing via signed-in user
+[debug] [2017-09-28T19:16:07.705Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/psychpyramids  
+ Thu Sep 28 2017 15:16:07 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:16:07.936Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-28T19:16:07.937Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/psychpyramids/tokens  
+ Thu Sep 28 2017 15:16:07 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:16:08.215Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\pyramid'...
+[info] 
+[debug] [2017-09-28T19:16:08.218Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/psychpyramids  
+ Thu Sep 28 2017 15:16:08 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:16:08.683Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-28T19:16:08.684Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/688276571448/clients/_:getWebAppConfig  
+ Thu Sep 28 2017 15:16:08 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:16:08.883Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...
+[debug] [2017-09-28T19:17:08.778Z] ----------------------------------------------------------------------
+[debug] [2017-09-28T19:17:08.781Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Romil\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-09-28T19:17:08.782Z] CLI Version:   3.12.0
+[debug] [2017-09-28T19:17:08.782Z] Platform:      win32
+[debug] [2017-09-28T19:17:08.782Z] Node Version:  v8.1.2
+[debug] [2017-09-28T19:17:08.782Z] Time:          Thu Sep 28 2017 15:17:08 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:17:08.782Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-28T19:17:08.797Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-28T19:17:08.798Z] > authorizing via signed-in user
+[debug] [2017-09-28T19:17:08.800Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/psychpyramids  
+ Thu Sep 28 2017 15:17:08 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:17:09.311Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-28T19:17:09.312Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/psychpyramids/tokens  
+ Thu Sep 28 2017 15:17:09 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:17:09.755Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\pyramid'...
+[info] 
+[debug] [2017-09-28T19:17:09.765Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/psychpyramids  
+ Thu Sep 28 2017 15:17:09 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:17:09.963Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-28T19:17:09.964Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/688276571448/clients/_:getWebAppConfig  
+ Thu Sep 28 2017 15:17:09 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:17:10.223Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...
+[debug] [2017-09-28T19:18:06.962Z] ----------------------------------------------------------------------
+[debug] [2017-09-28T19:18:06.965Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Romil\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-09-28T19:18:06.965Z] CLI Version:   3.12.0
+[debug] [2017-09-28T19:18:06.965Z] Platform:      win32
+[debug] [2017-09-28T19:18:06.965Z] Node Version:  v8.1.2
+[debug] [2017-09-28T19:18:06.965Z] Time:          Thu Sep 28 2017 15:18:06 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:18:06.965Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-28T19:18:06.987Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-28T19:18:06.988Z] > authorizing via signed-in user
+[debug] [2017-09-28T19:18:06.990Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/psychpyramids  
+ Thu Sep 28 2017 15:18:06 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:18:07.285Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-28T19:18:07.286Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/psychpyramids/tokens  
+ Thu Sep 28 2017 15:18:07 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:18:07.530Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\pyramid'...
+[info] 
+[debug] [2017-09-28T19:18:07.541Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/psychpyramids  
+ Thu Sep 28 2017 15:18:07 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:18:07.772Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-28T19:18:07.773Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/688276571448/clients/_:getWebAppConfig  
+ Thu Sep 28 2017 15:18:07 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:18:08.032Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...
+[debug] [2017-09-28T19:33:50.482Z] ----------------------------------------------------------------------
+[debug] [2017-09-28T19:33:50.484Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Romil\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-09-28T19:33:50.485Z] CLI Version:   3.12.0
+[debug] [2017-09-28T19:33:50.485Z] Platform:      win32
+[debug] [2017-09-28T19:33:50.485Z] Node Version:  v8.1.2
+[debug] [2017-09-28T19:33:50.485Z] Time:          Thu Sep 28 2017 15:33:50 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:33:50.485Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-28T19:33:50.503Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-28T19:33:50.503Z] > authorizing via signed-in user
+[debug] [2017-09-28T19:33:50.506Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/psychpyramids  
+ Thu Sep 28 2017 15:33:50 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:33:50.770Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-28T19:33:50.772Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/psychpyramids/tokens  
+ Thu Sep 28 2017 15:33:50 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:33:51.047Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\pyramid'...
+[info] 
+[debug] [2017-09-28T19:33:51.052Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/psychpyramids  
+ Thu Sep 28 2017 15:33:51 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:33:51.241Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-28T19:33:51.241Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/688276571448/clients/_:getWebAppConfig  
+ Thu Sep 28 2017 15:33:51 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:33:51.476Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...
+[debug] [2017-09-28T19:34:57.759Z] ----------------------------------------------------------------------
+[debug] [2017-09-28T19:34:57.762Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Romil\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-09-28T19:34:57.762Z] CLI Version:   3.12.0
+[debug] [2017-09-28T19:34:57.762Z] Platform:      win32
+[debug] [2017-09-28T19:34:57.762Z] Node Version:  v8.1.2
+[debug] [2017-09-28T19:34:57.762Z] Time:          Thu Sep 28 2017 15:34:57 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:34:57.762Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-28T19:34:57.777Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-28T19:34:57.777Z] > authorizing via signed-in user
+[debug] [2017-09-28T19:34:57.779Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/psychpyramids  
+ Thu Sep 28 2017 15:34:57 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:34:58.099Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-28T19:34:58.100Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/psychpyramids/tokens  
+ Thu Sep 28 2017 15:34:58 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:34:58.559Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\pyramid'...
+[info] 
+[debug] [2017-09-28T19:34:58.568Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/psychpyramids  
+ Thu Sep 28 2017 15:34:58 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:34:58.756Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-28T19:34:58.757Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/688276571448/clients/_:getWebAppConfig  
+ Thu Sep 28 2017 15:34:58 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:34:58.995Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...
+[debug] [2017-09-28T19:35:55.052Z] ----------------------------------------------------------------------
+[debug] [2017-09-28T19:35:55.054Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Romil\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-09-28T19:35:55.055Z] CLI Version:   3.12.0
+[debug] [2017-09-28T19:35:55.055Z] Platform:      win32
+[debug] [2017-09-28T19:35:55.055Z] Node Version:  v8.1.2
+[debug] [2017-09-28T19:35:55.055Z] Time:          Thu Sep 28 2017 15:35:55 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:35:55.055Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-28T19:35:55.070Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-28T19:35:55.071Z] > authorizing via signed-in user
+[debug] [2017-09-28T19:35:55.073Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/psychpyramids  
+ Thu Sep 28 2017 15:35:55 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:35:55.304Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-28T19:35:55.306Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/psychpyramids/tokens  
+ Thu Sep 28 2017 15:35:55 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:35:55.578Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\pyramid'...
+[info] 
+[debug] [2017-09-28T19:35:55.587Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/psychpyramids  
+ Thu Sep 28 2017 15:35:55 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:35:55.977Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-28T19:35:55.978Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/688276571448/clients/_:getWebAppConfig  
+ Thu Sep 28 2017 15:35:55 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-28T19:35:56.179Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...

@@ -11,14 +11,13 @@ angular.module('EditCtrl', [])
 		})
 		$scope.createPyramid = () => {
 			PyramidService.create($scope.formData)
-			.success((pyramids) => {
+			.then(pyramids => {
 				//clear form, update data
 				$('#pyr-form').find('input[type=text]').val('')
 				$scope.pyramids = pyramids.data
-			})
-			.error((data) => {
-				console.log('Error: ' + data)
-			})
+			}, error => {
+				console.log('Error: ' + error)
+			});
 		}
 
 		//get chapters
