@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 var db = require('./config/db');
 mongoose.connect(db.url);
 
-var port = process.env.port || 8080;
+var port = process.env.PORT || 8080;
 
 app.use(bp.json());
 app.use(bp.json({ type : 'application/vnd.api+json'}));
