@@ -9,7 +9,7 @@ angular.module('appRoutes', [])
 		})
 		.when('/create', {
 			templateUrl		: '/views/editor.html',
-			controllerAs	: 'EditorController'
+			controllerAs	: 'CreateController'
 		})
 		.when('/pyramids', {
 			templateUrl		: '/views/pyramids.html',

@@ -1,5 +1,5 @@
-angular.module('EditCtrl', [])
-	.controller('EditorController', ($scope, $http, PyramidService) => {
+angular.module('CreateCtrl', [])
+	.controller('CreateController', ($scope, $http, PyramidService) => {
 		console.log("Into editor controller")
 
 		//ESTABLISH SERVICES
@@ -10,6 +10,9 @@ angular.module('EditCtrl', [])
 			$scope.pyramids = pyramids.data
 		})
 		$scope.createPyramid = () => {
+			for (let key in $scope.formData) {
+				if (!$scope.formData[key]) return;
+			}
 			PyramidService.create($scope.formData)
 			.then(pyramids => {
 				//clear form, update data

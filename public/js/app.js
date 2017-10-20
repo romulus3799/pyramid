@@ -1,1 +1,1 @@
-angular.module('PyramidApp', ['ngRoute', 'appRoutes', 'EditCtrl', 'PyrCtrl', 'PyramidService'])
+angular.module('PyramidApp', ['ngRoute', 'appRoutes', 'CreateCtrl', 'PyrCtrl', 'PyramidService'])

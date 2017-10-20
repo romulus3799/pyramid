@@ -37,3 +37,6 @@ td {
 input, textarea, select {
 	width: 100% !important;
 }
+.clickable {
+	cursor: pointer;
+}

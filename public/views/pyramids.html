@@ -18,7 +18,7 @@
 				<td>{{ pyramid.chapter }}</td>
 				<td>{{ pyramid.author }}</td>
 				<td><span class="text-primary glyphicon glyphicon-pencil"></span></td>
-				<td><span class="text-danger glyphicon glyphicon-trash"></span></td>
+				<td class="clickable" ng-click="deletePyramid(pyramid._id)"><span class="text-danger glyphicon glyphicon-trash"></span></td>
 			</tr>
 		</tbody>
 	</table>

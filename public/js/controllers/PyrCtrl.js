@@ -90,4 +90,4 @@ angular.module('PyrCtrl', [])
 			$scope.formData.author = pyramid.author;
 			$scope.formData.chapter = pyramid.chapter;
 		}
-	})
+	});
