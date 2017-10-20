@@ -3,7 +3,10 @@ angular.module('appRoutes', [])
 ($routeProvider, $locationProvider) => {
 
 	$routeProvider
-		// TODO: add "/" page
+		.when('/', {
+			templateUrl		: '/views/home.html',
+			controllerAs	: 'HomeController'
+		})
 		.when('/create', {
 			templateUrl		: '/views/editor.html',
 			controllerAs	: 'EditorController'

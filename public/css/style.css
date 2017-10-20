@@ -30,3 +30,7 @@ body {
 td {
 	font-size: 16pt;
 }
+.blurb {
+	font-size: 24pt;
+	padding: 5px;
+}
