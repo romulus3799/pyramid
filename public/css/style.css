@@ -34,3 +34,6 @@ td {
 	font-size: 24pt;
 	padding: 5px;
 }
+input, textarea, select {
+	width: 100% !important;
+}
