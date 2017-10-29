@@ -1,90 +1,139 @@
 <div ng-controller="CreateController">
-	<div class="jumbotron text-center">
-		<h1>Pyramid Editor</h1>
-	</div>
 
-	<!-- PYRAMID input required maxlength="100" FORM -->
-	<div id="pyramid-form" class="row">
-		<div class="col-md-12 text-center">
-			<form action="" id="pyr-form">
-				<div class="form-group">
-					<!-- author input -->
-					<label for="author-input">Your name:</label>
+	<md-content layout-padding>
+		<!-- PYRAMID input required maxlength="100" FORM -->
+		<div style="text-align: center">
+			<h1>Pyramid Editor</h1>
+
+			<form id="pyr-form">
+				<!-- author input -->
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Your Name</label>
+					<md-icon class="material-icons">&#xE7FD;</md-icon>
 					<input required maxlength="100" type="text" id="author-input"
-					class="form-control input-lg"
-					placeholder="Author"
+					placeholder="Your name"
 					ng-model="formData.author">
+					<div ng-messages="projectForm.clientName.$error">
+		            	<div ng-message="required">Your name is required.</div>
+		        	</div>
+				</md-input-container>
 
-					<!-- name input -->
-					<label for="name-input">Name of term:</label>
+				<!-- name input -->
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Term Name</label>
+					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
 					<input required maxlength="100" type="text" id="name-input"
-					class="form-control input-lg"
-					placeholder="Name"
+					placeholder="Term name"
 					ng-model="formData.name">
+					<div ng-messages="projectForm.clientName.$error">
+		            	<div ng-message="required">The name of term is required.</div>
+		        	</div>
+				</md-input-container>
 
-					<!-- chapter input -->
-					<label for="chapter-input">Term's chapter or unit:</label>
-					<select required id="chapter-input"
-					class="form-control input-lg"
-					ng-model="formData.chapter">
-						<option ng-repeat="chapter in chapters">{{ chapter }}</option>
-					</select>
+				<!-- chapter input -->
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Chapter/Unit</label>
+					<!-- <md-icon class="material-icons" md-colors="::{color: 'notelinktheme-primary-700'}">&#xE152;</md-icon> -->
+					<md-select ng-model="formData.chapter" required>
+						<md-option ng-repeat="chapter in chapters" value="{{ chapter }}">
+							{{ chapter }}
+						</md-option>
+					</md-select>
+					<div ng-messages="projectForm.clientName.$error">
+		            	<div ng-message="required">The term's genre is required.</div>
+		        	</div>
+				</md-input-container>
 
-					<!-- context input -->
-					<label for="context-input">Term's category, theory, or group:</label>
+				<!-- context input -->
+				<md-input-container class="md-block" flex-gt-sm>
+					<!-- Term's Category, Theory, or Group -->
+					<label>Context</label>
+					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
 					<input required maxlength="100" type="text" id="context-input"
-					class="form-control input-lg"
-					placeholder="Context"
+					placeholder="Term's category, theory, or group..."
 					ng-model="formData.context">
+					<div ng-messages="projectForm.clientName.$error">
+		            	<div ng-message="required">The term's context is required.</div>
+		        	</div>
+				</md-input-container>
 
-					<!-- contrast input -->
-					<label for="contrast-input">Something the term could be confused with:</label>
+				<!-- contrast input -->
+				<md-input-container class="md-block" flex-gt-sm>
+					<!-- Something the term could be confused with -->
+					<label>Contrast</label>
+					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
 					<input required maxlength="100" type="text" id="contrast-input"
-					class="form-control input-lg"
-					placeholder="Contrast"
+					placeholder="Something the term could be confused with..."
 					ng-model="formData.contrast">
-
-					<!-- example input -->
-					<label for="example-input">Scenario in which the term is evident:</label>
-					<textarea required maxlength="300" rows="4" id="example-input"
-					class="form-control input-lg"
-					placeholder="Example"
+					<div ng-messages="projectForm.clientName.$error">
+		            	<div ng-message="required">The term's contrast is required.</div>
+		        	</div>
+				</md-input-container>
+				
+				<!-- example input -->
+				<md-input-container class="md-block" flex-gt-sm>
+					<!-- Scenario in which the term is evident -->
+					<label>Example</label>
+					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
+					<textarea required maxlength="300" 
+					rows="4" id="example-input"
+					md-select-on-focus
+					placeholder="Scenario in which the term is evident..."
 					ng-model="formData.example"></textarea>
+					<div ng-messages="projectForm.clientName.$error">
+		            	<div ng-message="required">The term's example is required.</div>
+		        	</div>
+				</md-input-container>
 
-					<!-- application input (TEMPORARILY REMOVED) -->
-					<!-- <label for="application-input">Scenario in which the term is evident:</label>
-					<input required maxlength="100" type="text" id="application-input"
-					class="form-control input-lg"
-					placeholder="application"
-					ng-model="formData.application"> -->
-
-					<!-- fn input -->
-					<label for="fn-input">What the term does, or what happens in presence of the term:</label>
-					<textarea required maxlength="300" rows="4" id="fn-input"
-					class="form-control input-lg"
-					placeholder="Function"
+				<!-- fn input -->
+				<md-input-container class="md-block" flex-gt-sm>
+					<!-- What the term does, or what happens in presence of the term -->
+					<label>Function</label>
+					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
+					<textarea required maxlength="300" 
+					rows="4" id="fn-input"
+					md-select-on-focus
+					placeholder="What the term does, or what happens in presence of the term..."
 					ng-model="formData.fn"></textarea>
+					<div ng-messages="projectForm.clientName.$error">
+		            	<div ng-message="required">The term's function is required.</div>
+		        	</div>
+				</md-input-container>
 
-					<!-- cause input -->
-					<label for="cause-input">Why the term exists:</label>
-					<textarea required maxlength="300" rows="4" id="cause-input"
-					class="form-control input-lg"
-					placeholder="Cause"
+				<!-- cause input -->
+				<md-input-container class="md-block" flex-gt-sm>
+					<!-- Why the term exists -->
+					<label>Cause</label>
+					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
+					<textarea required maxlength="300" 
+					rows="4" id="cause-input"
+					md-select-on-focus
+					placeholder="Why the term exists or how it came to exist..."
 					ng-model="formData.cause"></textarea>
+					<div ng-messages="projectForm.clientName.$error">
+		            	<div ng-message="required">The term's cause is required.</div>
+		        	</div>
+				</md-input-container>
 
-					<!-- impact input -->
-					<label for="impact-input">How the term affects real life:</label>
-					<textarea required maxlength="300" rows="4" id="impact-input"
-					class="form-control input-lg"
-					placeholder="Impact"
+				<!-- impact input -->
+				<md-input-container class="md-block" flex-gt-sm>
+					<!-- How the term affects real life -->
+					<label>Impact</label>
+					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
+					<textarea required maxlength="300" 
+					rows="4" id="impact-input"
+					md-select-on-focus
+					placeholder="How the term affects real life..."
 					ng-model="formData.impact"></textarea>
-				</div>
+					<div ng-messages="projectForm.clientName.$error">
+		            	<div ng-message="required">The term's impact is required.</div>
+		        	</div>
+				</md-input-container>
 
-				<button type="submit"
-				class="btn btn-primary btn-lg"
-				ng-click="createPyramid()">Add</button>
-
+				<md-button type="submit"
+				class="md-primary md-raised"
+				ng-click="createPyramid()">Create</md-button>
 			</form>
 		</div>
-	</div>
+	</md-content>
 </div>

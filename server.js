@@ -17,7 +17,7 @@ app.use(express.static(__dirname + '/public'));
 
 require('./app/routes')(app);
 app.listen(port);
-console.log('Tell me about port ' + port);
+console.log('Tell me the story of port ' + port);
 
 exports = module.exports = app;
 

@@ -1,42 +1,30 @@
 html {
 	overflow-y: scroll;
 }
-body {
-	padding-top: 50px;
-}
-
-.name-container {
-	margin: 40px 0px 20px 0px;
-}
-
 .pyramid-button {
 	width: 100%;
 	text-align: center;
 }
-
-.form-group label {
-	font-size: 1.6vw;
-	margin-top: 50px;
-}
-.form-group input[type=text] {
-	font-size: 2vw;
-	width: 50vw;
-}
-.form-group textarea {
-	font-size: 2vw;
-	width: 50vw;
-	resize: none;
-}
 td {
 	font-size: 16pt;
-}
-.blurb {
-	font-size: 24pt;
-	padding: 5px;
 }
 input, textarea, select {
 	width: 100% !important;
 }
 .clickable {
 	cursor: pointer;
+}
+#pyr-form {
+	display: inline-block;
+	text-align: left;
+}
+@media screen and (max-width: 900px) {
+  #pyr-form {
+    width: 100vw;
+  }
+}
+@media screen and (min-width: 901px) {
+  #pyr-form {
+    width: 50vw;
+  }
 }
