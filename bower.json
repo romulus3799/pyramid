@@ -1,11 +1,12 @@
 {
-    "name": "pyramid-game",
-    "version": "1.0.0",
-    "dependencies": {
-        "bootstrap": "latest",
-        "font-awesome": "latest",
-        "animate.css": "latest",
-        "angular": "latest",
-        "angular-route": "latest"
-    }
+  "name": "pyramid-game",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "animate.css": "latest",
+    "angular": "latest",
+    "angular-route": "latest",
+    "angular-material-data-table": "^0.10.10"
+  }
 }

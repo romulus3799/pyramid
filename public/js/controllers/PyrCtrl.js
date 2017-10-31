@@ -1,24 +1,35 @@
 angular.module('PyrCtrl', [])
 	.controller('PyramidController', ($scope, $http, PyramidService) => {
 		console.log("Into pyr controller");
+		
+		//-------------------SETUP TABLE-------------------//
+		$scope.selected = [];
+
+		$scope.query = {
+			order: 'name',
+			limit: 5,
+			page: 1
+		};
 		//-------------------ESTABLISH SERVICES-------------------//
 		//get all pyramids
 		$scope.pyramids = []
-		PyramidService.get().then((pyramids) => {
-			console.log(pyramids.data);
-			$scope.pyramids = pyramids.data;
-		})
+		$scope.getPyramids = () => {
+			PyramidService.get().then((pyramids) => {
+				$scope.pyramids = pyramids.data;
+			});
+		};
+		$scope.getPyramids();
 		$scope.updatePyramid = (id) => {
 			PyramidService.update(id, $scope.formData)
 			.then((pyramids) => {
 				$scope.pyramids = pyramids.data;
-			})
+			});
 		}
 		$scope.deletePyramid = (id) => {
 			PyramidService.delete(id).then((pyramids,err) => {
 				$scope.pyramids = pyramids.data;
 				if (err) {console.log(err); }
-			})
+			});
 		}
 
 		//-------------------SETUP-------------------//
@@ -58,6 +69,7 @@ angular.module('PyrCtrl', [])
 				}
 			}
 		})
+
 
 		//-------------------DYNAMIC-------------------//
 		$scope.execUpdate = (pyr) => {

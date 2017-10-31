@@ -1,139 +1,136 @@
 <div ng-controller="CreateController">
+	<!-- PYRAMID input required maxlength="100" FORM -->
+	<div style="text-align: center">
+		<h1>Pyramid Editor</h1>
 
-	<md-content layout-padding>
-		<!-- PYRAMID input required maxlength="100" FORM -->
-		<div style="text-align: center">
-			<h1>Pyramid Editor</h1>
+		<form id="pyr-form">
+			<!-- author input -->
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Your Name</label>
+				<md-icon class="material-icons">&#xE7FD;</md-icon>
+				<input required maxlength="100" type="text" id="author-input"
+				placeholder="Your name"
+				ng-model="formData.author">
+				<div ng-messages="projectForm.clientName.$error">
+	            	<div ng-message="required">Your name is required.</div>
+	        	</div>
+			</md-input-container>
 
-			<form id="pyr-form">
-				<!-- author input -->
-				<md-input-container class="md-block" flex-gt-sm>
-					<label>Your Name</label>
-					<md-icon class="material-icons">&#xE7FD;</md-icon>
-					<input required maxlength="100" type="text" id="author-input"
-					placeholder="Your name"
-					ng-model="formData.author">
-					<div ng-messages="projectForm.clientName.$error">
-		            	<div ng-message="required">Your name is required.</div>
-		        	</div>
-				</md-input-container>
+			<!-- name input -->
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Term Name</label>
+				<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
+				<input required maxlength="100" type="text" id="name-input"
+				placeholder="Term name"
+				ng-model="formData.name">
+				<div ng-messages="projectForm.clientName.$error">
+	            	<div ng-message="required">The name of term is required.</div>
+	        	</div>
+			</md-input-container>
 
-				<!-- name input -->
-				<md-input-container class="md-block" flex-gt-sm>
-					<label>Term Name</label>
-					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
-					<input required maxlength="100" type="text" id="name-input"
-					placeholder="Term name"
-					ng-model="formData.name">
-					<div ng-messages="projectForm.clientName.$error">
-		            	<div ng-message="required">The name of term is required.</div>
-		        	</div>
-				</md-input-container>
+			<!-- chapter input -->
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Chapter/Unit</label>
+				<!-- <md-icon class="material-icons" md-colors="::{color: 'notelinktheme-primary-700'}">&#xE152;</md-icon> -->
+				<md-select ng-model="formData.chapter" required>
+					<md-option ng-repeat="chapter in chapters" value="{{ chapter }}">
+						{{ chapter }}
+					</md-option>
+				</md-select>
+				<div ng-messages="projectForm.clientName.$error">
+	            	<div ng-message="required">The term's genre is required.</div>
+	        	</div>
+			</md-input-container>
 
-				<!-- chapter input -->
-				<md-input-container class="md-block" flex-gt-sm>
-					<label>Chapter/Unit</label>
-					<!-- <md-icon class="material-icons" md-colors="::{color: 'notelinktheme-primary-700'}">&#xE152;</md-icon> -->
-					<md-select ng-model="formData.chapter" required>
-						<md-option ng-repeat="chapter in chapters" value="{{ chapter }}">
-							{{ chapter }}
-						</md-option>
-					</md-select>
-					<div ng-messages="projectForm.clientName.$error">
-		            	<div ng-message="required">The term's genre is required.</div>
-		        	</div>
-				</md-input-container>
+			<!-- context input -->
+			<md-input-container class="md-block" flex-gt-sm>
+				<!-- Term's Category, Theory, or Group -->
+				<label>Context</label>
+				<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
+				<input required maxlength="100" type="text" id="context-input"
+				placeholder="Term's category, theory, or group..."
+				ng-model="formData.context">
+				<div ng-messages="projectForm.clientName.$error">
+	            	<div ng-message="required">The term's context is required.</div>
+	        	</div>
+			</md-input-container>
 
-				<!-- context input -->
-				<md-input-container class="md-block" flex-gt-sm>
-					<!-- Term's Category, Theory, or Group -->
-					<label>Context</label>
-					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
-					<input required maxlength="100" type="text" id="context-input"
-					placeholder="Term's category, theory, or group..."
-					ng-model="formData.context">
-					<div ng-messages="projectForm.clientName.$error">
-		            	<div ng-message="required">The term's context is required.</div>
-		        	</div>
-				</md-input-container>
+			<!-- contrast input -->
+			<md-input-container class="md-block" flex-gt-sm>
+				<!-- Something the term could be confused with -->
+				<label>Contrast</label>
+				<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
+				<input required maxlength="100" type="text" id="contrast-input"
+				placeholder="Something the term could be confused with..."
+				ng-model="formData.contrast">
+				<div ng-messages="projectForm.clientName.$error">
+	            	<div ng-message="required">The term's contrast is required.</div>
+	        	</div>
+			</md-input-container>
+			
+			<!-- example input -->
+			<md-input-container class="md-block" flex-gt-sm>
+				<!-- Scenario in which the term is evident -->
+				<label>Example</label>
+				<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
+				<textarea required maxlength="300" 
+				rows="4" id="example-input"
+				md-select-on-focus
+				placeholder="Scenario in which the term is evident..."
+				ng-model="formData.example"></textarea>
+				<div ng-messages="projectForm.clientName.$error">
+	            	<div ng-message="required">The term's example is required.</div>
+	        	</div>
+			</md-input-container>
 
-				<!-- contrast input -->
-				<md-input-container class="md-block" flex-gt-sm>
-					<!-- Something the term could be confused with -->
-					<label>Contrast</label>
-					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
-					<input required maxlength="100" type="text" id="contrast-input"
-					placeholder="Something the term could be confused with..."
-					ng-model="formData.contrast">
-					<div ng-messages="projectForm.clientName.$error">
-		            	<div ng-message="required">The term's contrast is required.</div>
-		        	</div>
-				</md-input-container>
-				
-				<!-- example input -->
-				<md-input-container class="md-block" flex-gt-sm>
-					<!-- Scenario in which the term is evident -->
-					<label>Example</label>
-					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
-					<textarea required maxlength="300" 
-					rows="4" id="example-input"
-					md-select-on-focus
-					placeholder="Scenario in which the term is evident..."
-					ng-model="formData.example"></textarea>
-					<div ng-messages="projectForm.clientName.$error">
-		            	<div ng-message="required">The term's example is required.</div>
-		        	</div>
-				</md-input-container>
+			<!-- fn input -->
+			<md-input-container class="md-block" flex-gt-sm>
+				<!-- What the term does, or what happens in presence of the term -->
+				<label>Function</label>
+				<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
+				<textarea required maxlength="300" 
+				rows="4" id="fn-input"
+				md-select-on-focus
+				placeholder="What the term does, or what happens in presence of the term..."
+				ng-model="formData.fn"></textarea>
+				<div ng-messages="projectForm.clientName.$error">
+	            	<div ng-message="required">The term's function is required.</div>
+	        	</div>
+			</md-input-container>
 
-				<!-- fn input -->
-				<md-input-container class="md-block" flex-gt-sm>
-					<!-- What the term does, or what happens in presence of the term -->
-					<label>Function</label>
-					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
-					<textarea required maxlength="300" 
-					rows="4" id="fn-input"
-					md-select-on-focus
-					placeholder="What the term does, or what happens in presence of the term..."
-					ng-model="formData.fn"></textarea>
-					<div ng-messages="projectForm.clientName.$error">
-		            	<div ng-message="required">The term's function is required.</div>
-		        	</div>
-				</md-input-container>
+			<!-- cause input -->
+			<md-input-container class="md-block" flex-gt-sm>
+				<!-- Why the term exists -->
+				<label>Cause</label>
+				<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
+				<textarea required maxlength="300" 
+				rows="4" id="cause-input"
+				md-select-on-focus
+				placeholder="Why the term exists or how it came to exist..."
+				ng-model="formData.cause"></textarea>
+				<div ng-messages="projectForm.clientName.$error">
+	            	<div ng-message="required">The term's cause is required.</div>
+	        	</div>
+			</md-input-container>
 
-				<!-- cause input -->
-				<md-input-container class="md-block" flex-gt-sm>
-					<!-- Why the term exists -->
-					<label>Cause</label>
-					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
-					<textarea required maxlength="300" 
-					rows="4" id="cause-input"
-					md-select-on-focus
-					placeholder="Why the term exists or how it came to exist..."
-					ng-model="formData.cause"></textarea>
-					<div ng-messages="projectForm.clientName.$error">
-		            	<div ng-message="required">The term's cause is required.</div>
-		        	</div>
-				</md-input-container>
+			<!-- impact input -->
+			<md-input-container class="md-block" flex-gt-sm>
+				<!-- How the term affects real life -->
+				<label>Impact</label>
+				<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
+				<textarea required maxlength="300" 
+				rows="4" id="impact-input"
+				md-select-on-focus
+				placeholder="How the term affects real life..."
+				ng-model="formData.impact"></textarea>
+				<div ng-messages="projectForm.clientName.$error">
+	            	<div ng-message="required">The term's impact is required.</div>
+	        	</div>
+			</md-input-container>
 
-				<!-- impact input -->
-				<md-input-container class="md-block" flex-gt-sm>
-					<!-- How the term affects real life -->
-					<label>Impact</label>
-					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
-					<textarea required maxlength="300" 
-					rows="4" id="impact-input"
-					md-select-on-focus
-					placeholder="How the term affects real life..."
-					ng-model="formData.impact"></textarea>
-					<div ng-messages="projectForm.clientName.$error">
-		            	<div ng-message="required">The term's impact is required.</div>
-		        	</div>
-				</md-input-container>
-
-				<md-button type="submit"
-				class="md-primary md-raised"
-				ng-click="createPyramid()">Create</md-button>
-			</form>
-		</div>
-	</md-content>
+			<md-button type="submit"
+			class="md-primary md-raised"
+			ng-click="createPyramid()">Create</md-button>
+		</form>
+	</div>
 </div>

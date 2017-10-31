@@ -5,7 +5,8 @@ angular.module('PyramidApp',
 		'ngMaterial', 
 		'CreateCtrl', 
 		'PyrCtrl', 
-		'PyramidService'
+		'PyramidService',
+		'md.data.table'
 	])
 	.config($mdThemingProvider => {
 

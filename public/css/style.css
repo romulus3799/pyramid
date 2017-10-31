@@ -28,3 +28,6 @@ input, textarea, select {
     width: 50vw;
   }
 }
+main {
+	overflow-y: auto;
+}

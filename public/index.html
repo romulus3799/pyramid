@@ -13,7 +13,8 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="libs/angular-material/prebuilt-themes/indigo-pink.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/style.css">
-
+		<link href="libs/angular-material-data-table/dist/md-data-table.min.css" rel="stylesheet" type="text/css"/>
+	
 		<!-- SPELLS -->
 		<script src="libs/angular/angular.min.js" charset="utf-8"></script>
 		<script src="libs/angular-route/angular-route.min.js" charset="utf-8"></script>
@@ -21,6 +22,7 @@
 		<script src="libs/angular-animate/angular-animate.min.js"></script>
 		<script src="libs/angular-aria/angular-aria.min.js"></script>
 		<script src="libs/angular-messages/angular-messages.min.js"></script>
+		<script src="libs/angular-material-data-table/dist/md-data-table.min.js"></script>
 		
 		<script src="libs/jquery/dist/jquery.min.js" charset="utf-8"></script>
 		
@@ -32,21 +34,42 @@
 	    <script src="js/app.js"></script>
 	</head>
 	<body ng-app="PyramidApp">
-		<md-content class="md-padding">
-			<md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="Pages">
+		<div layout="column" layout-fill>
+			<header>
+				<md-toolbar md-scroll-shrink>
+					<div layout="row" layout-align="center center" flex>
+						WORK IN PROGRESS
+					</div>
+				</md-toolbar>
+			</header>
 
-				<md-nav-item md-nav-href="/" name="home">
-					<span class="material-icons">&#xE88A;</span> Home
-				</md-nav-item>
+			<md-content layout-padding flex>
+			<main flex>
+				<md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="Pages">
 
-				<md-nav-item md-nav-href="/create" name="create">
-					<span class="material-icons">&#xE147;</span> Create
-				</md-nav-item>
-				<md-nav-item md-nav-href="/pyramids" name="pyramids">
-					<span class="material-icons">&#xE86B;</span> Pyramids
-				</md-nav-item>
-			</md-nav-bar>
-			<div ng-view></div>
-		</md-content>
+					<md-nav-item md-nav-href="/" name="home">
+						<span class="material-icons">&#xE88A;</span> Home
+					</md-nav-item>
+
+					<md-nav-item md-nav-href="/create" name="create">
+						<span class="material-icons">&#xE147;</span> Create
+					</md-nav-item>
+					<md-nav-item md-nav-href="/pyramids" name="pyramids">
+						<span class="material-icons">&#xE86B;</span> Pyramids
+					</md-nav-item>
+				</md-nav-bar>
+				
+					<div ng-view></div>
+			</main>
+			</md-content>
+
+			<footer>
+				<md-toolbar class="md-scroll-shrink">
+					<div layout="row" layout-align="center center" flex>
+						WORK IN PROGRESS
+					</div>
+				</md-toolbar>
+			</footer>
+		</div>
 	</body>
 </html>
