@@ -11,8 +11,8 @@ angular.module('PyramidApp',
 	.config($mdThemingProvider => {
 
 		$mdThemingProvider.theme('pyramidtheme')
-		.primaryPalette('indigo')
-		.accentPalette('orange')
+		.primaryPalette('green')
+		.accentPalette('indigo')
 		.warnPalette('pink');
 
 		$mdThemingProvider.setDefaultTheme('pyramidtheme');
