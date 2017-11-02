@@ -22,6 +22,7 @@
         			<tr md-row>
         				<th md-column>Term</th>
         				<th md-column>Chapter</th>
+                        <th md-column>Context</th>
         				<th md-column>Author</th>
         				<th md-column colspan="3">Actions</th>
         			</tr>
@@ -32,7 +33,8 @@
                     md-select-id="name" md-auto-select
                     ng-repeat="pyramid in pyramids">
         				<td md-cell>{{ pyramid.name }}</td>
-        				<td md-cell>{{ pyramid.chapter }}</td>
+                        <td md-cell>{{ pyramid.chapter }}</td>
+        				<td md-cell>{{ pyramid.context }}</td>
         				<td md-cell>{{ pyramid.author }}</td>
                         
                         <td md-cell class="clickable">

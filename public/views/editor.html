@@ -1,7 +1,7 @@
 <div ng-controller="CreateController">
 	<!-- PYRAMID input required maxlength="100" FORM -->
 	<div style="text-align: center">
-		<h1>Pyramid Editor</h1>
+		<h2>Create Pyramid</h2>
 
 		<form id="pyr-form">
 			<!-- author input -->
@@ -127,10 +127,16 @@
 	            	<div ng-message="required">The term's impact is required.</div>
 	        	</div>
 			</md-input-container>
-
-			<md-button type="submit"
-			class="md-primary md-raised"
-			ng-click="createPyramid()">Create</md-button>
+			
+			<div style="text-align: center;">
+				<md-button 
+				type="submit"
+				class="md-primary md-raised"
+				style="transform: scale(1.5);"
+				ng-click="createPyramid()">
+					Create
+				</md-button>
+			</div>
 		</form>
 	</div>
 </div>

@@ -11,7 +11,10 @@ angular.module('CreateCtrl', [])
 		})
 		$scope.createPyramid = () => {
 			for (let key in $scope.formData) {
-				if (!$scope.formData[key]) return;
+				if (!$scope.formData[key]) {
+					console.log("Error: invalid key " + key);
+					return;
+				}
 			}
 			PyramidService.create($scope.formData)
 			.then(pyramids => {
@@ -35,7 +38,6 @@ angular.module('CreateCtrl', [])
 			context		: '',
 			contrast	: '',
 			example		: '',
-			application	: '',
 			fn			: '',
 			cause		: '',
 			impact		: '',
