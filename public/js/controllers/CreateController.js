@@ -1,4 +1,4 @@
-angular.module('CreateCtrl', [])
+angular.module('CreateController', [])
 	.controller('CreateController', ($scope, $http, PyramidService) => {
 		console.log("Into editor controller")
 
@@ -38,7 +38,7 @@ angular.module('CreateCtrl', [])
 			context		: '',
 			contrast	: '',
 			example		: '',
-			fn			: '',
+			function	: '',
 			cause		: '',
 			impact		: '',
 			author		: '',

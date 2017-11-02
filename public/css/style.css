@@ -29,6 +29,7 @@ input, textarea, select {
   }
 }
 main {
+	overflow-x: hidden;
 	overflow-y: hidden;
 }
 .action-column {
@@ -36,6 +37,9 @@ main {
 }
 .text-center {
 	text-align: center;
+}
+.text-right {
+	text-align: right;
 }
 th, td {
   -webkit-touch-callout: none;

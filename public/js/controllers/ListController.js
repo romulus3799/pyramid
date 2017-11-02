@@ -1,5 +1,5 @@
-angular.module('PyrCtrl', [])
-	.controller('PyramidController', ($scope, $http, PyramidService) => {
+angular.module('ListController', [])
+	.controller('ListController', ($scope, $mdDialog, $http, PyramidService) => {
 		console.log("Into pyr controller");
 		
 		//-------------------SETUP TABLE-------------------//
@@ -26,6 +26,8 @@ angular.module('PyrCtrl', [])
 			});
 		}
 		$scope.deletePyramid = (id) => {
+			event.stopPropagation();
+
 			PyramidService.delete(id).then((pyramids,err) => {
 				$scope.pyramids = pyramids.data;
 				if (err) {console.log(err); }
@@ -39,14 +41,29 @@ angular.module('PyrCtrl', [])
 			$scope.chapters = raw.data.split('\n');
 		})
 
+		$scope.showView = (pyr, event) => {
+			$mdDialog.show({
+				templateUrl: 'views/viewDialog.tmpl.html',
+				locals: { pyramid: pyr },
+				controller: ViewDialogController,
+				targetEvent: event,
+				clickOutsideToClose: true
+			});
+		}
+
+		function ViewDialogController($scope, $mdDialog, pyramid) {
+			$scope.pyramid = pyramid;
+			$scope.hide = () => { $mdDialog.hide(); };
+			$scope.cancel = () => { $mdDialog.cancel(); };
+		}
+
 		//setup form data
 		$scope.formData = {
 			name		: '',
 			context		: '',
 			contrast	: '',
 			example		: '',
-			application	: '',
-			fn			: '',
+			function	: '',
 			cause		: '',
 			impact		: '',
 			author		: '',
@@ -95,8 +112,7 @@ angular.module('PyrCtrl', [])
 			$scope.formData.context = pyramid.context;
 			$scope.formData.contrast = pyramid.contrast;
 			$scope.formData.example = pyramid.example;
-			$scope.formData.application = pyramid.application;
-			$scope.formData.fn = pyramid.fn;
+			$scope.formData.function = pyramid.function;
 			$scope.formData.cause = pyramid.cause;
 			$scope.formData.impact = pyramid.impact;
 			$scope.formData.author = pyramid.author;

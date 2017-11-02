@@ -1,4 +1,4 @@
-<div ng-controller="PyramidController">
+<div ng-controller="ListController">
     <md-card>
         <md-toolbar class="md-table-toolbar md-default" ng-hide="selected.length">
             <div class="md-toolbar-tools">
@@ -38,7 +38,9 @@
         				<td md-cell>{{ pyramid.author }}</td>
                         
                         <td md-cell class="action-column">
-                            <md-button class="md-icon-button md-primary md-raised">
+                            <md-button 
+                            class="md-icon-button md-primary md-raised"
+                            ng-click="showView(pyramid, $event)">
                                 <md-icon>remove_red_eye</md-icon>
                             </md-button>
                         </td>

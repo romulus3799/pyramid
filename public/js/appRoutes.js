@@ -8,12 +8,12 @@ angular.module('appRoutes', [])
 			controllerAs	: 'HomeController'
 		})
 		.when('/create', {
-			templateUrl		: '/views/editor.html',
+			templateUrl		: '/views/create.html',
 			controllerAs	: 'CreateController'
 		})
 		.when('/pyramids', {
-			templateUrl		: '/views/pyramids.html',
-			controllerAs	: 'PyramidController'
+			templateUrl		: '/views/list.html',
+			controllerAs	: 'ListController'
 		})
 
 	$locationProvider.html5Mode(true)

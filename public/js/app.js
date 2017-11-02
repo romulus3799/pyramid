@@ -2,9 +2,10 @@ angular.module('PyramidApp',
 	[
 		'ngRoute', 
 		'appRoutes',
-		'ngMaterial', 
-		'CreateCtrl', 
-		'PyrCtrl', 
+		'ngMaterial',
+		'IndexController', 
+		'CreateController', 
+		'ListController', 
 		'PyramidService',
 		'md.data.table'
 	])

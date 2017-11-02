@@ -1,0 +1,40 @@
+<md-dialog aria-label="{{ pyramid.name }}" style="width: 50%">
+	<md-toolbar>
+		<div class="md-toolbar-tools">
+			<h2>{{ pyramid.name }}</h2>
+			<span flex></span>
+			<md-button class="md-icon-button" ng-click="cancel()">
+				<md-icon>close</md-icon>
+			</md-button>
+		</div>
+	</md-toolbar>
+	<md-dialog-content>
+		<div class="md-dialog-content text-center">
+			<h2>Author</h2>
+			<p>{{ pyramid.author }}</p>
+			<h2>Unit</h2>
+			<p>{{ pyramid.chapter }}</p>
+			<h2>Term Name</h2>
+			<p>{{ pyramid.name }}</p>
+			<h2>Context</h2>
+			<p>{{ pyramid.context }}</p>
+			<h2>Contrast</h2>
+			<p>{{ pyramid.contrast }}</p>
+			<h2>Example</h2>
+			<p>{{ pyramid.example }}</p>
+			<h2>Function</h2>
+			<p>{{ pyramid.function }}</p>
+			<h2>Cause</h2>
+			<p>{{ pyramid.cause }}</p>
+			<h2>Impact</h2>
+			<p>{{ pyramid.impact }}</p>
+		</div>
+	</md-dialog-content>
+
+	<md-dialog-actions layout="row">
+		<span flex></span>
+		<md-button ng-click="cancel()" class="md-primary">
+			Done
+		</md-button>
+	</md-dialog-actions>
+</md-dialog>
