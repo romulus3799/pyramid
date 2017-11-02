@@ -1,6 +1,6 @@
 <div ng-controller="CreateController">
 	<!-- PYRAMID input required maxlength="100" FORM -->
-	<div class="text-center">
+	<div class="text-center" ng-hide="submitted">
 		<h2>Create Pyramid</h2>
 
 		<form id="pyr-form">
@@ -92,7 +92,7 @@
 				rows="4" id="fn-input"
 				md-select-on-focus
 				placeholder="What the term does, or what happens in presence of the term..."
-				ng-model="formData.fn"></textarea>
+				ng-model="formData.function"></textarea>
 				<div ng-messages="projectForm.clientName.$error">
 	            	<div ng-message="required">The term's function is required.</div>
 	        	</div>
@@ -138,5 +138,17 @@
 				</md-button>
 			</div>
 		</form>
+	</div>
+	<div ng-show="submitted" layout-align="center center">
+		<h1>"{{ formData.name }}" by {{ formData.author }} has been created!</h1>
+		<div layout-align="center center">
+			<md-button class="md-accent md-raised btn-after-post" ng-click="reloadRoute()">
+				 <md-icon>add_circle</md-icon> Create Another
+			</md-button>
+			<md-button class="md-accent md-raised btn-after-post" ng-click="navigate('/pyramids')">
+				<md-icon>view_list</md-icon> All Pyramids
+			</md-button>
+			<!-- TODO: add play button -->
+		</div>
 	</div>
 </div>

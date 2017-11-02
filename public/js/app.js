@@ -6,6 +6,8 @@ angular.module('PyramidApp',
 		'IndexController', 
 		'CreateController', 
 		'ListController', 
+		'ViewDialogController', 
+		'EditDialogController', 
 		'PyramidService',
 		'md.data.table'
 	])

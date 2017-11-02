@@ -1,5 +1,5 @@
 angular.module('CreateController', [])
-	.controller('CreateController', ($scope, $http, PyramidService) => {
+	.controller('CreateController', ($scope, $http, $location, $route, PyramidService) => {
 		console.log("Into editor controller")
 
 		//ESTABLISH SERVICES
@@ -18,9 +18,8 @@ angular.module('CreateController', [])
 			}
 			PyramidService.create($scope.formData)
 			.then(pyramids => {
-				//clear form, update data
-				$('#pyr-form').find('input[type=text]').val('')
-				$scope.pyramids = pyramids.data
+				$scope.pyramids = pyramids.data;
+				$scope.submitted = true;
 			}, error => {
 				console.log('Error: ' + error)
 			});
@@ -43,5 +42,13 @@ angular.module('CreateController', [])
 			impact		: '',
 			author		: '',
 			chapter		: ''
+		}
+
+		$scope.submitted = false;
+		$scope.reloadRoute = () => {
+			$route.reload();
+		}
+		$scope.navigate = href => {
+			$location.path(href);
 		}
 	})

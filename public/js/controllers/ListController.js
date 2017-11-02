@@ -19,8 +19,10 @@ angular.module('ListController', [])
 			});
 		};
 		$scope.getPyramids();
-		$scope.updatePyramid = (id) => {
-			PyramidService.update(id, $scope.formData)
+		$scope.updatePyramid = (pyr) => {
+			console.log("Updating");
+			console.log(pyr);
+			PyramidService.update(pyr._id, pyr)
 			.then((pyramids) => {
 				$scope.pyramids = pyramids.data;
 			});
@@ -45,48 +47,27 @@ angular.module('ListController', [])
 			$mdDialog.show({
 				templateUrl: 'views/viewDialog.tmpl.html',
 				locals: { pyramid: pyr },
-				controller: ViewDialogController,
+				controller: 'ViewDialogController',
 				targetEvent: event,
 				clickOutsideToClose: true
 			});
 		}
-
-		function ViewDialogController($scope, $mdDialog, pyramid) {
-			$scope.pyramid = pyramid;
-			$scope.hide = () => { $mdDialog.hide(); };
-			$scope.cancel = () => { $mdDialog.cancel(); };
+		$scope.showEdit = (pyr, event) => {
+			$mdDialog.show({
+				templateUrl: 'views/editDialog.tmpl.html',
+				locals: { 
+					pyramid: pyr,
+					chapters: $scope.chapters 
+				},
+				controller: 'EditDialogController',
+				targetEvent: event,
+				clickOutsideToClose: true
+			})
+			.then(pyramid => {
+				if (pyramid)
+					$scope.updatePyramid(pyramid);
+			});
 		}
-
-		//setup form data
-		$scope.formData = {
-			name		: '',
-			context		: '',
-			contrast	: '',
-			example		: '',
-			function	: '',
-			cause		: '',
-			impact		: '',
-			author		: '',
-			chapter		: ''
-		};
-
-		//-------------------JQUERY SETUP-------------------//
-		$(document).ready(() => {
-			//set default chapter values for each pyramid
-			for(let i = 0; i < $scope.pyramids.length; i++) {
-				let pyr = $scope.pyramids[i];
-				let options = $('#chapter-input-' + pyr._id).find('option');
-
-				//iter over each option and check if it matches pyramid data
-				for(let a = 0; a < options.length; a++) {
-					if(options[a].val() === pyr.chapter) {
-						options[a].attr('selected','selected');
-						console.log('Found');
-					}
-				}
-			}
-		})
-
 
 		//-------------------DYNAMIC-------------------//
 		$scope.execUpdate = (pyr) => {

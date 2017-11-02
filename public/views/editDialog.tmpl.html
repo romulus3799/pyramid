@@ -1,0 +1,155 @@
+<md-dialog aria-label="{{ pyramid.name }}" style="width: 50%">
+	<md-toolbar>
+		<div class="md-toolbar-tools">
+			<h2>{{ pyramid.name }}</h2>
+			<span flex></span>
+			<md-button class="md-icon-button" ng-click="cancel()">
+				<md-icon>close</md-icon>
+			</md-button>
+		</div>
+	</md-toolbar>
+	<form>
+		<md-dialog-content>
+				<!-- author input -->
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Your Name</label>
+					<md-icon>person</md-icon>
+					<input required maxlength="100" type="text" id="author-input"
+					placeholder="Your name"
+					ng-model="pyramid.author">
+					<div ng-messages="projectForm.clientName.$error">
+		            	<div ng-message="required">Your name is required.</div>
+		        	</div>
+				</md-input-container>
+
+				<!-- name input -->
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Term Name</label>
+					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
+					<input required maxlength="100" type="text" id="name-input"
+					placeholder="Term name"
+					ng-model="pyramid.name">
+					<div ng-messages="projectForm.clientName.$error">
+		            	<div ng-message="required">The name of term is required.</div>
+		        	</div>
+				</md-input-container>
+
+				<!-- chapter input -->
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Chapter/Unit</label>
+					<!-- <md-icon class="material-icons" md-colors="::{color: 'notelinktheme-primary-700'}">&#xE152;</md-icon> -->
+					<md-select ng-model="pyramid.chapter" required>
+						<md-option ng-repeat="chapter in chapters" value="{{ chapter }}">
+							{{ chapter }}
+						</md-option>
+					</md-select>
+					<div ng-messages="projectForm.clientName.$error">
+		            	<div ng-message="required">The term's genre is required.</div>
+		        	</div>
+				</md-input-container>
+
+				<!-- context input -->
+				<md-input-container class="md-block" flex-gt-sm>
+					<!-- Term's Category, Theory, or Group -->
+					<label>Context</label>
+					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
+					<input required maxlength="100" type="text" id="context-input"
+					placeholder="Term's category, theory, or group..."
+					ng-model="pyramid.context">
+					<div ng-messages="projectForm.clientName.$error">
+		            	<div ng-message="required">The term's context is required.</div>
+		        	</div>
+				</md-input-container>
+
+				<!-- contrast input -->
+				<md-input-container class="md-block" flex-gt-sm>
+					<!-- Something the term could be confused with -->
+					<label>Contrast</label>
+					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
+					<input required maxlength="100" type="text" id="contrast-input"
+					placeholder="Something the term could be confused with..."
+					ng-model="pyramid.contrast">
+					<div ng-messages="projectForm.clientName.$error">
+		            	<div ng-message="required">The term's contrast is required.</div>
+		        	</div>
+				</md-input-container>
+				
+				<!-- example input -->
+				<md-input-container class="md-block" flex-gt-sm>
+					<!-- Scenario in which the term is evident -->
+					<label>Example</label>
+					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
+					<textarea required maxlength="300" 
+					rows="4" id="example-input"
+					md-select-on-focus
+					placeholder="Scenario in which the term is evident..."
+					ng-model="pyramid.example"></textarea>
+					<div ng-messages="projectForm.clientName.$error">
+		            	<div ng-message="required">The term's example is required.</div>
+		        	</div>
+				</md-input-container>
+
+				<!-- fn input -->
+				<md-input-container class="md-block" flex-gt-sm>
+					<!-- What the term does, or what happens in presence of the term -->
+					<label>Function</label>
+					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
+					<textarea required maxlength="300" 
+					rows="4" id="fn-input"
+					md-select-on-focus
+					placeholder="What the term does, or what happens in presence of the term..."
+					ng-model="pyramid.function"></textarea>
+					<div ng-messages="projectForm.clientName.$error">
+		            	<div ng-message="required">The term's function is required.</div>
+		        	</div>
+				</md-input-container>
+
+				<!-- cause input -->
+				<md-input-container class="md-block" flex-gt-sm>
+					<!-- Why the term exists -->
+					<label>Cause</label>
+					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
+					<textarea required maxlength="300" 
+					rows="4" id="cause-input"
+					md-select-on-focus
+					placeholder="Why the term exists or how it came to exist..."
+					ng-model="pyramid.cause"></textarea>
+					<div ng-messages="projectForm.clientName.$error">
+		            	<div ng-message="required">The term's cause is required.</div>
+		        	</div>
+				</md-input-container>
+
+				<!-- impact input -->
+				<md-input-container class="md-block" flex-gt-sm>
+					<!-- How the term affects real life -->
+					<label>Impact</label>
+					<!-- <md-icon class="material-icons">&#xE7FD;</md-icon> -->
+					<textarea required maxlength="300" 
+					rows="4" id="impact-input"
+					md-select-on-focus
+					placeholder="How the term affects real life..."
+					ng-model="pyramid.impact"></textarea>
+					<div ng-messages="projectForm.clientName.$error">
+		            	<div ng-message="required">The term's impact is required.</div>
+		        	</div>
+				</md-input-container>
+				
+				
+		</md-dialog-content>
+
+		<md-dialog-actions layout="row">
+			<span flex></span>
+			<md-button ng-click="cancel()" class="md-warn">
+				Done
+			</md-button>
+			<div class="text-center">
+					<md-button 
+					type="submit"
+					class="md-primary"
+					ng-click="submit()">
+						Submit
+					</md-button>
+				</div>
+		</md-dialog-actions>
+	</form>
+</md-dialog>

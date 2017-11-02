@@ -53,3 +53,6 @@ th, td {
 .spacer {
 	width: 50px;
 }
+.btn-after-post {
+	font-size: 24pt !important; padding: 15px;
+}
