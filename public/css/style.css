@@ -31,3 +31,9 @@ input, textarea, select {
 main {
 	overflow-y: hidden;
 }
+.action-column {
+	padding: 0px !important;
+}
+.text-center {
+	text-align: center;
+}
