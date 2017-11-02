@@ -46,3 +46,6 @@ th, td {
             user-select: none;
 	cursor: default;
 }
+.spacer {
+	width: 50px;
+}
